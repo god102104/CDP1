@@ -1,0 +1,22 @@
+{
+  "name": "caregiver-matching-platform",
+  "version": "1.0.0",
+  "description": "cdp1: caregiver-matching-platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/god102104/CDP1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/god102104/CDP1/issues"
+  },
+  "homepage": "https://github.com/god102104/CDP1#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
