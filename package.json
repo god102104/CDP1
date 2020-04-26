@@ -4,7 +4,7 @@
   "description": "cdp1: caregiver-matching-platform",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "nodemon --exec babel-node app.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/god102104/CDP1#readme",
   "dependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/node": "^7.8.7",
+    "@babel/preset-env": "^7.9.5",
     "axios": "^0.19.2",
     "express": "^4.17.1",
     "helmet": "^3.22.0",
