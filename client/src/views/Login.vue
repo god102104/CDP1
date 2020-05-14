@@ -22,11 +22,3 @@
     </v-form>
   </v-card>
 </template>
-
-<script>
-export default {
-  name: "Login",
-
-  data: () => ({}),
-};
-</script>
