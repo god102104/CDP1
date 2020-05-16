@@ -34,7 +34,7 @@ export default {
       links: [
         { icon: "priority_high", text: "서비스 소개", route: "/" },
         { icon: "account_box", text: "요양보호사 찾기", route: "/Applicant" },
-        { icon: "home", text: "요양원 찾기", route: "/Jobopening" }
+        { icon: "home", text: "일자리 찾기", route: "/Jobopening" }
       ]
     };
   }
