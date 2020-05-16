@@ -1,29 +1,36 @@
 const caregivers = [
   {
+    id: 1,
     name: 'John',
     age: 26,
   },
   {
+    id: 2,
     name: 'John',
     age: 26,
   },
   {
+    id: 3,
     name: 'John',
     age: 26,
   },
   {
+    id: 4,
     name: 'John',
     age: 26,
   },
   {
+    id: 5,
     name: 'John',
     age: 26,
   },
   {
+    id: 6,
     name: 'John',
     age: 26,
   },
   {
+    id: 7,
     name: 'John',
     age: 26,
   },
