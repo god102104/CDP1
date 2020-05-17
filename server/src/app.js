@@ -5,8 +5,10 @@ import helmet from 'helmet';
 import cors from 'cors';
 import caregiverRouter from './routers/caregiverRouter';
 import offerRouter from './routers/offererRouter';
+import { sequelize } from './models';
 
 const app = express();
+sequelize.sync(); // MySQL과 연동
 const PORT = process.env.PORT || 3000;
 
 app.use(helmet());
