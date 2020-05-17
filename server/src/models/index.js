@@ -1,5 +1,5 @@
-import path from 'path';
-import Sequelize from 'sequelize';
+const path = require('path');
+const Sequelize = require('sequelize');
 
 const env = process.env.NODE_ENV || 'development';
 const config = require(path.join(__dirname, '..', '..', 'config', config.js))[
@@ -17,4 +17,6 @@ const sequelize = new Sequelize(
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-export default db;
+db.Caregiver = require('./Caregiver')(sequelize, Sequelize);
+
+module.exports = db;
