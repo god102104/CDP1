@@ -1,8 +1,9 @@
-const path = require('path');
-const Sequelize = require('sequelize');
+import path from 'path';
+import Sequelize from 'sequelize';
+import CaregiverSchema from './Caregiver';
 
 const env = process.env.NODE_ENV || 'development';
-const config = require(path.join(__dirname, '..', '..', 'config', config.js))[
+const config = require(path.join(__dirname, '..', '..', 'config', 'config.js'))[
   env
 ];
 const db = {};
@@ -17,6 +18,6 @@ const sequelize = new Sequelize(
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-db.Caregiver = require('./Caregiver')(sequelize, Sequelize);
+db.Caregiver = CaregiverSchema(sequelize, Sequelize);
 
-module.exports = db;
+export default db;

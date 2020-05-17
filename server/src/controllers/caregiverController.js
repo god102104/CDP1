@@ -1,37 +1,25 @@
+import db from '../models';
+
+const { Caregiver } = db;
 const caregivers = [
   {
-    id: 1,
     name: 'John',
     age: 26,
   },
   {
-    id: 2,
-    name: 'John',
+    name: 'Brian',
     age: 26,
   },
   {
-    id: 3,
-    name: 'John',
+    name: 'Justin',
     age: 26,
   },
   {
-    id: 4,
-    name: 'John',
+    name: 'Amy',
     age: 26,
   },
   {
-    id: 5,
-    name: 'John',
-    age: 26,
-  },
-  {
-    id: 6,
-    name: 'John',
-    age: 26,
-  },
-  {
-    id: 7,
-    name: 'John',
+    name: 'James',
     age: 26,
   },
 ];
@@ -44,6 +32,18 @@ export default {
     res.send('GET /caregivers/:id');
   },
   createCaregiver(req, res) {
+    caregivers.forEach(async (caregiver) => {
+      try {
+        const result = await Caregiver.create({
+          name: caregiver.name,
+          age: caregiver.age,
+        });
+        console.log('crete success: ', result);
+        res.status(201).json(result);
+      } catch (err) {
+        console.log(err);
+      }
+    });
     res.send('POST /caregivers');
   },
   updateCaregiver(req, res) {

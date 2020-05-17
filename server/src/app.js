@@ -1,14 +1,16 @@
 import express from 'express';
+import dotenv from 'dotenv';
 import morgan from 'morgan';
 import bodyParser from 'body-parser';
 import helmet from 'helmet';
 import cors from 'cors';
 import caregiverRouter from './routers/caregiverRouter';
 import offerRouter from './routers/offererRouter';
-import { sequelize } from './models';
+import db from './models';
 
+dotenv.config();
 const app = express();
-sequelize.sync(); // MySQL과 연동
+db.sequelize.sync(); // MySQL과 연동
 const PORT = process.env.PORT || 3000;
 
 app.use(helmet());
