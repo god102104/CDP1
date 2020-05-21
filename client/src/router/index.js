@@ -1,32 +1,38 @@
 import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
+import Login from '../views/Login.vue';
+import Jobopening from '../views/Jobopening.vue';
+import Applicant from '../views/Applicant.vue';
+import Signup from '../views/Signup';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
     path: '/',
-    name: 'Home',
+    name: 'home',
     component: Home,
   },
   {
-    path: '/Applicant',
-    name: 'Applicant',
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/Applicant.vue'),
+    path: '/applicant',
+    name: 'applicant',
+    component: Applicant,
   },
   {
-    path: '/Jobopening',
-    name: 'Jobopening',
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/Jobopening.vue'),
+    path: '/jobopening',
+    name: 'jobopening',
+    component: Jobopening,
   },
   {
-    path: '/Login',
-    name: 'Login',
-    component: () =>
-      import(/* webpackChunkName: "about" */ '../views/Login.vue'),
+    path: '/login',
+    name: 'login',
+    component: Login,
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: Signup,
   },
 ];
 

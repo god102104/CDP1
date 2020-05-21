@@ -3,23 +3,13 @@ import db from '../models';
 const { Caregiver } = db;
 const caregivers = [
   {
+    username: 'hello@naver.com',
     name: 'John',
     age: 26,
   },
   {
+    username: 'wow@gmail.com',
     name: 'Brian',
-    age: 26,
-  },
-  {
-    name: 'Justin',
-    age: 26,
-  },
-  {
-    name: 'Amy',
-    age: 26,
-  },
-  {
-    name: 'James',
     age: 26,
   },
 ];

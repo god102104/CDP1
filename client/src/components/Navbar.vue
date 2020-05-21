@@ -6,9 +6,12 @@
         <span class="grey--text">CMS</span>
       </v-toolbar-title>
       <v-spacer></v-spacer>
-      <v-btn depressed color="transparent" to="/Login">
-        <span class="grey--text">Sign In</span>
+      <v-btn depressed color="transparent" to="/login">
+        <span class="grey--text">로그인</span>
         <v-icon right>exit_to_app</v-icon>
+      </v-btn>
+      <v-btn to="/signup">
+        <span>회원 가입</span>
       </v-btn>
     </v-app-bar>
     <v-navigation-drawer disable-resize-watcher app v-model="drawer" class="light-green lighten-4">
@@ -32,11 +35,11 @@ export default {
     return {
       drawer: false,
       links: [
-        { icon: "priority_high", text: "서비스 소개", route: "/" },
-        { icon: "account_box", text: "요양보호사 찾기", route: "/Applicant" },
-        { icon: "home", text: "일자리 찾기", route: "/Jobopening" }
-      ]
+        { icon: 'priority_high', text: '서비스 소개', route: '/' },
+        { icon: 'account_box', text: '요양보호사 찾기', route: '/applicant' },
+        { icon: 'home', text: '일자리 찾기', route: '/jobopening' },
+      ],
     };
-  }
+  },
 };
 </script>

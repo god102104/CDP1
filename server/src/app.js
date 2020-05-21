@@ -6,6 +6,7 @@ import helmet from 'helmet';
 import cors from 'cors';
 import caregiverRouter from './routers/caregiverRouter';
 import offerRouter from './routers/offererRouter';
+import usernameRouter from './routers/usernameRouter';
 import db from './models';
 
 dotenv.config();
@@ -20,6 +21,7 @@ app.use(cors());
 
 app.use('/caregivers', caregiverRouter);
 app.use('/offerers', offerRouter);
+app.use('/username', usernameRouter);
 
 app.listen(PORT, () => {
   console.log(`✅ Listening on: http://localhost:${PORT}`);

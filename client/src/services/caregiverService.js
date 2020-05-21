@@ -7,8 +7,8 @@ export default {
   getOne(id) {
     return Api().get(`/caregivers/${id}`);
   },
-  register() {
-    return Api().post('/caregivers');
+  register(data) {
+    return Api().post('/caregivers', data);
   },
   update(id) {
     return Api().put(`/caregivers/${id}`);
