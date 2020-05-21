@@ -3,12 +3,20 @@ export default (sequelize, DataTypes) => {
     'Caregiver',
     {
       username: {
-        type: DataTypes.STRING(50),
+        type: DataTypes.STRING(40),
         allowNull: false,
         unique: true,
       },
+      password: {
+        type: DataTypes.STRING(40),
+        allowNull: false,
+      },
       name: {
-        type: DataTypes.STRING(20),
+        type: DataTypes.STRING(40),
+        allowNull: false,
+      },
+      job: {
+        type: DataTypes.STRING(40),
         allowNull: false,
       },
       age: {

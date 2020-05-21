@@ -7,6 +7,9 @@
       <v-container>
         <v-text-field label="이름" v-model="name"></v-text-field>
         <v-text-field label="아이디" v-model="username" @input="handleUsernameInput"></v-text-field>
+        <v-alert v-if="doesExist" dense text type="error">
+          동일한 아이디가 이미 존재합니다.
+        </v-alert>
         <v-text-field
           type="password"
           label="비밀번호"
@@ -19,7 +22,18 @@
           v-model="password2"
           @change="handlePasswordChange"
         ></v-text-field>
-        <v-btn type="submit" :disabled="disabled" rounded color="primary" width="100%" class="mt-5" form="signup-form">
+        <v-alert v-if="passwordNotMatch" dense text type="error">
+          비밀번호가 일치하지 않습니다.
+        </v-alert>
+        <v-btn
+          type="submit"
+          :disabled="btnDisabled"
+          rounded
+          color="primary"
+          width="100%"
+          class="mt-5"
+          form="signup-form"
+        >
           <span>회원 가입</span>
         </v-btn>
       </v-container>
@@ -35,25 +49,32 @@ export default {
   data() {
     return {
       name: '',
-      doesExist: true, // 버튼 비활성회를 위해 디폴트 true
+      doesExist: null, // 버튼 비활성회를 위해 디폴트 true
       username: '',
       password1: '',
       password2: '',
     };
   },
   computed: {
-    disabled() {
+    btnDisabled() {
       const { name, username, password1, password2, doesExist } = this;
       if (name && username && password1 && password2) {
         return password1 === password2 && !doesExist ? false : true;
       }
       return true;
     },
+    passwordNotMatch() {
+      const { password1, password2 } = this;
+      return password1 && password2 && password1 !== password2;
+    },
   },
   methods: {
     // 비밀번호 유효성 검사 함수 필요
     async handleUsernameInput() {
-      if (this.username === '') return;
+      if (this.username === '') {
+        this.doesExist = null;
+        return;
+      }
       try {
         const response = await registerService.checkUsernameDuplication({
           params: {

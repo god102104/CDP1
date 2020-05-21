@@ -1,18 +1,6 @@
 import db from '../models';
 
 const { Caregiver } = db;
-const caregivers = [
-  {
-    username: 'hello@naver.com',
-    name: 'John',
-    age: 26,
-  },
-  {
-    username: 'wow@gmail.com',
-    name: 'Brian',
-    age: 26,
-  },
-];
 
 export default {
   showCaregivers(req, res) {
@@ -21,20 +9,21 @@ export default {
   showCaregiver(req, res) {
     res.send('GET /caregivers/:id');
   },
-  createCaregiver(req, res) {
-    caregivers.forEach(async (caregiver) => {
-      try {
-        const result = await Caregiver.create({
-          name: caregiver.name,
-          age: caregiver.age,
-        });
-        console.log('crete success: ', result);
-        res.status(201).json(result);
-      } catch (err) {
-        console.log(err);
-      }
-    });
-    res.send('POST /caregivers');
+  async createCaregiver(req, res) {
+    const { username, password, name, job, age } = req.body;
+    try {
+      const result = await Caregiver.create({
+        username,
+        password,
+        name,
+        job,
+        age,
+      });
+      console.log('crete success: ', result);
+      res.status(201).json(result);
+    } catch (error) {
+      console.log('createCaregiver: ', error);
+    }
   },
   updateCaregiver(req, res) {
     res.send('PUT /caregivers/:id');
