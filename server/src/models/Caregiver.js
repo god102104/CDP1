@@ -8,15 +8,15 @@ export default (sequelize, DataTypes) => {
         unique: true,
       },
       password: {
-        type: DataTypes.STRING(40),
+        type: DataTypes.STRING(100),
         allowNull: false,
       },
       name: {
         type: DataTypes.STRING(40),
         allowNull: false,
       },
-      job: {
-        type: DataTypes.STRING(40),
+      hasCertificate: {
+        type: DataTypes.BOOLEAN,
         allowNull: false,
       },
       age: {

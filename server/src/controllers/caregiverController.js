@@ -1,5 +1,7 @@
 import db from '../models';
+import bcrypt from 'bcrypt';
 
+const saltRounds = 10;
 const { Caregiver } = db;
 
 export default {
@@ -11,10 +13,13 @@ export default {
   },
   async createCaregiver(req, res) {
     const { username, password, name, job, age } = req.body;
+
     try {
+      const salt = bcrypt.genSaltSync(saltRounds);
+      const hash = bcrypt.hashSync(password, salt);
       const result = await Caregiver.create({
         username,
-        password,
+        password: hash,
         name,
         job,
         age,
