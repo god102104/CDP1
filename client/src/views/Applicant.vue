@@ -1,6 +1,6 @@
 <template>
   <div class="Applicant">
-    <h1>요양 보호사 찾기 페이지</h1>
+    <h1>요양 보호사 찾기</h1>
     <div v-for="caregiver in caregivers" v-bind:key="caregiver.id">{{caregiver}}</div>
   </div>
 </template>
