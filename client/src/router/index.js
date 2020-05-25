@@ -4,7 +4,9 @@ import Home from '../views/Home.vue';
 import Login from '../views/Login.vue';
 import Jobopening from '../views/Jobopening.vue';
 import Applicant from '../views/Applicant.vue';
-import Signup from '../views/Signup';
+import cg_Signup from '../views/forCg/cg_Signup';
+import chd_Signup from '../views/forChd/chd_Signup';
+import Certificate from '../views/forCg/Certificate';
 
 Vue.use(VueRouter);
 
@@ -30,10 +32,20 @@ const routes = [
     component: Login,
   },
   {
-    path: '/signup',
-    name: 'signup',
-    component: Signup,
+    path: '/cg_signup',
+    name: 'cg_signup',
+    component: cg_Signup,
   },
+  {
+    path: '/chd_signup',
+    name: 'chd_signup',
+    component: chd_Signup,
+  },
+  {
+    path: '/certificate',
+    name: 'certificate',
+    component: Certificate,
+  }
 ];
 
 const router = new VueRouter({

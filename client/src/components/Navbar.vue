@@ -10,8 +10,11 @@
         <span class="grey--text">로그인</span>
         <v-icon right>exit_to_app</v-icon>
       </v-btn>
-      <v-btn to="/signup">
-        <span>회원 가입</span>
+      <v-btn depressed color="transparent" to="/cg_signup">
+        <span class="grey--text">요양보호사회원 가입</span>
+      </v-btn>
+      <v-btn depressed color="transparent" to="/chd_signup">
+        <span class="grey--text">요양원회원 가입</span>
       </v-btn>
     </v-app-bar>
     <v-navigation-drawer disable-resize-watcher app v-model="drawer" class="light-green lighten-4">
