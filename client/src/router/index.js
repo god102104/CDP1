@@ -6,7 +6,9 @@ import Jobopening from '../views/Jobopening.vue';
 import Applicant from '../views/Applicant.vue';
 import cg_Signup from '../views/forCg/cg_Signup';
 import chd_Signup from '../views/forChd/chd_Signup';
-import Certificate from '../views/forCg/Certificate';
+import cg_Process from '../views/forCg/cg_Process';
+import chd_Process from '../views/forChd/chd_Process';
+import Signup from '../views/Signup';
 
 Vue.use(VueRouter);
 
@@ -42,10 +44,20 @@ const routes = [
     component: chd_Signup,
   },
   {
-    path: '/certificate',
-    name: 'certificate',
-    component: Certificate,
-  }
+    path: '/cg_process',
+    name: 'cg_process',
+    component: cg_Process,
+  },
+  {
+    path: '/chd_process',
+    name: 'chd_process',
+    component: chd_Process,
+  },
+  {
+    path: '/signup',
+    name: 'signup',
+    component: Signup,
+  },
 ];
 
 const router = new VueRouter({

@@ -18,7 +18,7 @@
         ></v-text-field>
         <v-text-field
           type="password"
-          label="비밀번호 획안"
+          label="비밀번호 획인"
           v-model="password2"
           @change="handlePasswordChange"
         ></v-text-field>
