@@ -1,0 +1,98 @@
+.para{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;	
+}
+.err{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#F00;	
+	text-align:center;
+}
+.commentsWrap .postbox input[type="button"] {
+    background: none repeat scroll 0 0 #DDDDDD;
+    border: medium none;
+    cursor: pointer;
+    padding: 5px 10px;
+    position: absolute;
+    right: 10px;
+    top: 11px;
+}
+.chatCol .chatForm .writeBox input[type="button"] {
+    background: linear-gradient(#FFFFFF, #EFEFEF) repeat scroll 0 0 rgba(0, 0, 0, 0);
+    border: 1px solid #CCCCCC;
+    box-shadow: 1px 1px 1px #CCCCCC;
+    color: #333333;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    height: 55px;
+    margin-left: 10px;
+    padding: 0 10px;
+}
+.addgalleryWrap input[type="button"]{float:left; margin: 7px 0 0 20px; font-size:14px; font-weight:bold; color:#01C58A; border:none; background:none; cursor:pointer;}
+
+.error span{display:block; background:#000; padding: 6px 64px; font-size:11px; color:#fff; border-radius:3px;}
+
+.viewlinks{background:url(../images/btn-bg.jpg) repeat-x; border:1px solid #999; line-height:20px; padding: 0 10px; color:#333; font-size:12px; font-weight:bold; margin:5px 0 0 8px; text-shadow:1px 1px #fff;}
+
+
+/*==========: Profile Detail :===========*/
+.profileWrap{margin:0;}
+.profileWrap h1{color:#333; font-size:30px; font-weight:normal; display:inline-block;}
+.profileWrap .totalCount, .profileWrap .onlinelast{font-size:14px; padding-left:10px; color:#666; font-style:italic;}
+.actionBox{margin-top:10px;}
+.actionBox a{font-size:14px; border:1px solid #ccc; background:url(../images/action-bg.jpg) repeat-x; color:#333; float:left; padding: 0 10px; line-height:30px; margin-right:7px; font-weight:bold; border-radius:2px;}
+.actionBox a:hover{box-shadow:0 0 3px #ccc; border:1px solid #999;}
+.actionBox a i{width:18px; height:16px; float:left; margin:7px 10px 0 0;}
+.actionBox a .chat{background:url(../images/chat-ico.png) no-repeat;}
+.actionBox a .message{background:url(../images/msg-ico.png) no-repeat;}
+.actionBox a .favico{background:url(../images/fav-ico.png) no-repeat;}
+.actionBox a .gallery{background:url(../images/gallery.png) no-repeat;}
+.actionBox a .block{background:url(../images/block.png) no-repeat;}
+.actionBox a .adfrnd{background:url(../images/add-friend.png) no-repeat;}
+.actionBox a span{float:left;}
+
+.profileWrap .pofilePic{width:320px; margin-top:15px;}
+.profileWrap .pofilePic .ratebox{background:#fff; padding:10px; border:1px solid #ccc; margin-top:15px; border-radius:4px;}
+.profileWrap .pofilePic .ratebox .rateint{margin: 0 0;}
+.profileWrap .pofilePic .ratebox .rateint .ratelabel{float:left; width:120px; font-size:12px; font-weight:bold; color:#555;}
+.profileWrap .pofilePic .ratebox .rateint .ratevalue{float:left; width:175px; font-size:16px; font-weight:bold; color:#018564;}
+.profileWrap .pofilePic .ratebox .rateint select{padding:4px; border:1px solid #ccc; border-radius:3px;}
+.profileWrap .pofilePic .ratebox .rateint input[type="submit"]{background:#5aa69d; border:1px solid #5aa69d; color:#fff; padding: 4px 10px; border-radius:3px;}
+
+.profileWrap .pofilePic .picBox{margin-top:0;}
+.profileWrap .pofilePic .picBox img{width:300px; background:#fff; border:1px solid #ccc; padding:8px; border-radius:4px;}
+.profileWrap .pofileDetail{width:350px; margin-left:20px; margin-top:15px;}
+.profileWrap .pofileDetail h2{color:#333; font-size:20px; font-weight:normal; padding-bottom:5px; background:url(../images/border.jpg) repeat-x bottom;}
+.profileWrap .pofileDetail .infoList{list-style:none; margin:15px 0;}
+.profileWrap .pofileDetail .infoList li{padding:5px 0 5px 0;}
+.profileWrap .pofileDetail .infoList li .label{font-size:13px; color:#666; float:left; width:130px;}
+.profileWrap .pofileDetail .infoList li .inftxt{font-size:13px; font-weight:bold; color:#018564; float:left; width:220px;}
+.profileWrap .pofileDetail .infoList li p{font-size:12px; color:#222; float:left; width:220px; line-height:18px;}
+
+.profileWrap .aboutme{margin: 10px 0;}
+.profileWrap .aboutme h2{color:#333; font-size:20px; font-weight:normal; padding-bottom:5px; background:url(../images/border.jpg) repeat-x bottom; margin-bottom:10px;}
+.profileWrap .aboutme p{font-size:12px; line-height:18px; color:#555;}
+
+
+/*==========: Comments Section :===========*/
+.commentsWrap{ margin-top:20px;}
+.commentsWrap .totalComment{margin:0; padding:10px 5px 10px 35px; background:#018564 url(../images/coment-icon.png) no-repeat 10px 11px;}
+.commentsWrap .totalComment a{font-size:12px; color:#fff;}
+.commentsWrap .totalComment a:hover{text-decoration:underline;}
+.commentsWrap .commentsList{list-style:none;}
+.commentsWrap .commentsList li{padding:5px; border-bottom:1px solid #ddd; font-size:11px; background:#fff;}
+.commentsWrap .commentsList li .maincomnt{margin:0;}
+.commentsWrap .commentsList li .userpic{float:left; width:30px;}
+.commentsWrap .commentsList li .userpic img{width:30px;}
+.commentsWrap .commentsList li .usercomnt{float:left; width:300px; margin-left:7px;}
+.commentsWrap .commentsList li .usercomnt span{color:#999;}
+.commentsWrap .commentsList li .usercomnt .userlink{font-weight:bold; color:#018564; font-size:12px;}
+.commentsWrap .commentsList li .timerep{margin-top:5px;}
+.commentsWrap .commentsList li a{color:#018564}
+.commentsWrap .commentsList li a:hover{text-decoration:underline;}
+.commentsWrap .postbox{margin:0; padding:5px; background:#ccc; position:relative;}
+.commentsWrap .postbox textarea{border:1px solid #999; min-height:20px; width:80%; resize:none; overflow:auto; padding-right:19%;}
+.commentsWrap .postbox input[type="submit"]{background:#ddd; position:absolute; right:10px; top:11px; border:none; padding: 5px 10px; cursor:pointer;}
+.commentsWrap .postCommentlint{font-size:14px; border:1px solid #ccc; background:url(../images/action-bg.jpg) repeat-x; color:#333; float:right; padding: 0 15px; line-height:30px; margin:0 0 7px 7px; font-weight:bold; border-radius:2px;}
+.commentsWrap .postCommentlint:hover{box-shadow:0 0 3px #ccc; border:1px solid #999;}
